@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{1AC5F50F-62FE-41B4-8CE0-9F218C599AAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{A7DC04D2-99AD-4F53-A9FA-899F6CF0E44E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presantation", "Presantation", "{A7A0DE4D-C5C6-4D69-939B-A26C417BE3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatizationDocs.Data", "AutomatizationDocs.Data\AutomatizationDocs.Data.csproj", "{407D053E-135F-44B7-AF4F-696FA942461C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{407D053E-135F-44B7-AF4F-696FA942461C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407D053E-135F-44B7-AF4F-696FA942461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407D053E-135F-44B7-AF4F-696FA942461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407D053E-135F-44B7-AF4F-696FA942461C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{407D053E-135F-44B7-AF4F-696FA942461C} = {1AC5F50F-62FE-41B4-8CE0-9F218C599AAF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF8C9B57-EB17-4D86-8AD0-F977BDC80DF9}
+	EndGlobalSection
+EndGlobal
