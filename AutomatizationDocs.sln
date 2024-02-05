@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{A7DC04D2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presantation", "Presantation", "{A7A0DE4D-C5C6-4D69-939B-A26C417BE3C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatizationDocs.Data", "AutomatizationDocs.Data\AutomatizationDocs.Data.csproj", "{407D053E-135F-44B7-AF4F-696FA942461C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomatizationDocs.Data", "AutomatizationDocs.Data\AutomatizationDocs.Data.csproj", "{407D053E-135F-44B7-AF4F-696FA942461C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatizationDocs.Logic", "AutomatizationDocs.Logic\AutomatizationDocs.Logic.csproj", "{CE697CDE-BE20-4E9A-83CD-F3C9ED8BCDF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,17 @@ Global
 		{407D053E-135F-44B7-AF4F-696FA942461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{407D053E-135F-44B7-AF4F-696FA942461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{407D053E-135F-44B7-AF4F-696FA942461C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE697CDE-BE20-4E9A-83CD-F3C9ED8BCDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE697CDE-BE20-4E9A-83CD-F3C9ED8BCDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE697CDE-BE20-4E9A-83CD-F3C9ED8BCDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE697CDE-BE20-4E9A-83CD-F3C9ED8BCDF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{407D053E-135F-44B7-AF4F-696FA942461C} = {1AC5F50F-62FE-41B4-8CE0-9F218C599AAF}
+		{CE697CDE-BE20-4E9A-83CD-F3C9ED8BCDF8} = {A7DC04D2-99AD-4F53-A9FA-899F6CF0E44E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF8C9B57-EB17-4D86-8AD0-F977BDC80DF9}
