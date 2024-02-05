@@ -9,6 +9,8 @@ namespace AutomatizationDocs.Data.Entity.Client
     public class Adress
     {
         public Guid Id { get; set; }
+
+        public string City { get; set; }
         public string Streat { get;set; }
 
         public int NumberOfHouse { get; set; }
