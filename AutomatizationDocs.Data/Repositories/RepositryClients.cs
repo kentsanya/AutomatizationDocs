@@ -1,6 +1,6 @@
 ﻿using AutomatizationDocs.Data.Entity.Client;
 using AutomatizationDocs.Data.Context;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace AutomatizationDocs.Data.Repositories
 {
