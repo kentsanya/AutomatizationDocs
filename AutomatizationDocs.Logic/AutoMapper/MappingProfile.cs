@@ -9,7 +9,9 @@ namespace AutomatizationDocs.Logic.AutoMapper
         //поля дто и поля модели данних отличаються количеством, но не типом..
         public MappingProfile() 
         {
-            CreateMap<Client, DTOClient>();
+            CreateMap<Client, DTOClient>()
+                .ForMember(dest=>dest.Name, opt=>opt.MapFrom(sor=>sor.FullName.FirstName))
+                .ForMember(dest => dest.LastName, opt => opt.MapFrom(sor => sor.FullName.LastName));
             CreateMap<Passport, DTOPassport>();
         }
     }
