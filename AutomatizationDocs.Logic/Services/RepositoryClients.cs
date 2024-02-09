@@ -18,50 +18,83 @@ namespace AutomatizationDocs.Logic.Services
             var client = _clients.FirstOrDefault(c => c.IdNumber.Number == id.ToString());
             if (client != null)
             {
-                DTOAdress adress = new DTOAdress()
-                {
-                    Id = client.Id,
-                    City = client.Adress.City,
-                    NumberOfHouse = client.Adress.NumberOfHouse,
-                    Streat = client.Adress.Streat
-                };
-                return new DTOClient
-                {
-                    Id = client.Id,
-                    Name = client.FullName.FirstName,
-                    Adress = adress,
-                    IdentityUser = client.IdentityUser,
-                    IdNumber = new DTOIdNumber { Id = client.Id, Number = client.IdNumber.Number },
-                    LastName = client.FullName.LastName,
-                    OtherConnections = client.OtherConnections,
-                    Passport = new DTOPassport()
-                    {
-                        Id = client.Passport.Id,
-                        Date = client.Passport.Date,
-                        DateOfBirth = client.Passport.DateOfBirth,
-                        Organization = client.Passport.Organization,
-                        Number = client.Passport.Number,
-                        Series = client.Passport.Series
-                    }
-                };
+
+                return MapClient(client);
             }
             else
                 return null;
         }
 
-        public DTOClient FindByPaspportSeries(string pasportseries)
+        public DTOClient? FindByPaspportSeries(string pasportseries)
         {
-            throw new NotImplementedException();
+            var client = _clients.FirstOrDefault(c => c.Passport.Series == pasportseries);
+            if (client != null)
+            {
+
+                return MapClient(client);
+            }
+            else
+                return null;
         }
 
-        public IEnumerable<DTOClient> FindBySurname(string surname)
+        public IEnumerable<DTOClient>? FindBySurname(string lastname)
         {
-            throw new NotImplementedException();
+            var clients = _clients.Where(c => c.FullName.LastName == lastname);
+            if (clients != null)
+            {
+                List<DTOClient> dTOClients = new List<DTOClient>(); 
+                foreach (var client in clients) 
+                {
+                    dTOClients.Add(MapClient(client));
+                }
+                return dTOClients;
+            }
+            else
+                return null;
         }
 
-        public IEnumerable<DTOClient> FindBySurnameName(string surname, string name)
+        public IEnumerable<DTOClient>? FindBySurnameName(string lastname, string name)
         {
-            throw new NotImplementedException();
+            var clients = _clients.Where(c => c.FullName.LastName == lastname && c.FullName.FirstName == name);
+            if (clients != null)
+            {
+                List<DTOClient> dTOClients = new List<DTOClient>();
+                foreach (var client in clients)
+                {
+                    dTOClients.Add(MapClient(client));
+                }
+                return dTOClients;
+            }
+            else
+                return null;
+        }
+        private DTOClient MapClient(Client client) 
+        {
+            return new DTOClient
+            {
+                Id = client.Id,
+                Name = client.FullName.FirstName,
+                Adress = new DTOAdress()
+                {
+                    Id = client.Id,
+                    City = client.Adress.City,
+                    NumberOfHouse = client.Adress.NumberOfHouse,
+                    Streat = client.Adress.Streat
+                },
+                IdentityUser = client.IdentityUser,
+                IdNumber = new DTOIdNumber { Id = client.Id, Number = client.IdNumber.Number },
+                LastName = client.FullName.LastName,
+                OtherConnections = client.OtherConnections,
+                Passport = new DTOPassport()
+                {
+                    Id = client.Passport.Id,
+                    Date = client.Passport.Date,
+                    DateOfBirth = client.Passport.DateOfBirth,
+                    Organization = client.Passport.Organization,
+                    Number = client.Passport.Number,
+                    Series = client.Passport.Series
+                }
+            };
         }
     }
 }
